@@ -26,8 +26,8 @@ class _Manhinh3State extends State<Manhinh3> {
 
   Future<void> fetchTours() async {
     try {
-      final response = await http
-          .get(Uri.parse('https://gkiltdd.onrender.com/api/trips'));
+      final response =
+          await http.get(Uri.parse('https://ktg-ktdt.onrender.com/api/trips'));
       if (response.statusCode == 200) {
         final List<dynamic> data = json.decode(response.body);
         setState(() {
@@ -235,7 +235,8 @@ class TourCard extends StatelessWidget {
                 const SizedBox(height: 5),
                 Row(
                   children: [
-                    const Icon(Icons.calendar_today, size: 16, color: Colors.grey),
+                    const Icon(Icons.calendar_today,
+                        size: 16, color: Colors.grey),
                     const SizedBox(width: 5),
                     Text(tour.date),
                   ],

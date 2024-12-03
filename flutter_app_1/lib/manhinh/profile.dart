@@ -22,7 +22,7 @@ class _SettingsScreenState extends State<Manhinh6> {
   }
 
 Future<void> fetchUserData() async {
-  final url = Uri.parse('https://gkiltdd.onrender.com/api/users');
+  final url = Uri.parse('https://ktg-ktdt.onrender.com/api/users');
   try {
     final response = await http.get(url);
     if (response.statusCode == 200) {
